@@ -34,15 +34,23 @@ class ObjectDetection:
 
     def video_object_detection(self, video_path=None, camera_index=None):
         cv_window_name = ""
-        if video_path:
+
+        if video_path != None:
             if os.path.exists(video_path):
                 cap = cv.VideoCapture(video_path)
                 cv_window_name = video_path.split("/")[-1]
             else:
                 print(f"[ERROR] Video file path: {video_path} does not exist.")
+                return
         else:
-            cap = cv.VideoCapture(camera_index)
             cv_window_name = f"Camera {camera_index}"
+
+            cap = cv.VideoCapture(camera_index)
+
+            if cap is None or not cap.isOpened():       
+                print(f"[ERROR] Camera {camera_index} is invalid.")
+                return
+                
 
         net = cv.dnn.readNet(self.__yolov3_weights_path,
                              self.__yolov3_cfg_path)
@@ -58,7 +66,7 @@ class ObjectDetection:
         while True:
             try:
                 _, img = cap.read()
-                height, width, channels = img.shape
+                height, width, _ = img.shape
 
                 blob = cv.dnn.blobFromImage(img, 1/255,
                                             (416, 416),
@@ -140,7 +148,7 @@ class ObjectDetection:
     def image_object_detection(self, image_path=None):
         if image_path:
             if not os.path.exists(image_path):
-                print(f"[ERROR] Image path does not exist.")
+                print(f"[ERROR] Image path: {image_path} does not exist.")
                 return
 
         image_name = image_path.split("/")[-1]
