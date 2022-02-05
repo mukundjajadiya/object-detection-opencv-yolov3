@@ -7,8 +7,11 @@ This project uses yolov3 dependencies,
 - [coco.names](https://github.com/pjreddie/darknet/blob/master/data/coco.names)
 - [yolov3.config](https://github.com/pjreddie/darknet/blob/master/cfg/yolov3.cfg)
 - [yolov3.weights](https://pjreddie.com/media/files/yolov3.weights)
-## **Step: 1** Clone Object Detection repository
 
+## Preview of Object Detection
+
+
+## **Step: 1** Clone Object Detection repository
 ```bash
 git clone https://github.com/mukundjajadiya/object-detection-opencv-yolov3.git
 ```
@@ -40,12 +43,12 @@ After downloading the above dependency set path in `app.py`,
 ```python
 from ObjectDetection import ObjectDetection
 
-OD = ObjectDetection(yolov3_weights_path="yolov3/yolov3.weights",
-                     yolov3_cfg_path="yolov3/yolov3.cfg",
-                     yolov3_coco_names_path="yolov3/coco.names")
+OD = ObjectDetection(yolov3_weights_path="data/yolov3.weights",
+                     yolov3_cfg_path="data/yolov3.cfg",
+                     yolov3_coco_names_path="data/coco.names")
 
 # Object detection on video
-OD.video_object_detection(video_path = "videos/1.mp4")
+OD.video_object_detection(video_path = "data/videos/1.mp4")
 ```
 
 or
@@ -55,9 +58,9 @@ or
 ```bash
 from ObjectDetection import ObjectDetection
 
-OD = ObjectDetection(yolov3_weights_path="yolov3/yolov3.weights",
-                     yolov3_cfg_path="yolov3/yolov3.cfg",
-                     yolov3_coco_names_path="yolov3/coco.names")
+OD = ObjectDetection(yolov3_weights_path="data/yolov3.weights",
+                     yolov3_cfg_path="data/yolov3.cfg",
+                     yolov3_coco_names_path="data/coco.names")
 
 # Object detection on camera
 OD.video_object_detection(camera_index = 0)
@@ -70,12 +73,12 @@ or
 ```bash
 from ObjectDetection import ObjectDetection
 
-OD = ObjectDetection(yolov3_weights_path="yolov3/yolov3.weights",
-                     yolov3_cfg_path="yolov3/yolov3.cfg",
-                     yolov3_coco_names_path="yolov3/coco.names")
+OD = ObjectDetection(yolov3_weights_path="data/yolov3.weights",
+                     yolov3_cfg_path="data/yolov3.cfg",
+                     yolov3_coco_names_path="data/coco.names")
 
 # Object detection on an image
-OD.image_object_detection(image_path = "images/1.jpg")
+OD.image_object_detection(image_path = "data/images/1.jpg")
 ```
 Run app.py python file to detect an objects 
 ```bash

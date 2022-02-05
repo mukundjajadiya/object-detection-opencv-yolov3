@@ -1,4 +1,6 @@
-yolov3/
+data/coco.names
+data/yolov3.cfg
+data/yolov3.weights
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
