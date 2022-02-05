@@ -9,13 +9,19 @@ This project uses yolov3 dependencies,
 - [yolov3.weights](https://pjreddie.com/media/files/yolov3.weights)
 
 ## Preview of Object Detection
-Object Detection on image:
+
+- Object Detection on image:
 <p align="center">
-  <img width="100%" height="100%" src="https://github.com/mukundjajadiya/object-detection-opencv-yolov3/blob/main/data/GIF/object_detection_on_image.png" alt="image">
+  <img width="600px" height="100%" src="https://github.com/mukundjajadiya/object-detection-opencv-yolov3/blob/main/data/GIF/object_detection_on_image.png" alt="object-detection-on-image">
 </p>
 
-Object Detection on video:
-![](https://github.com/mukundjajadiya/object-detection-opencv-yolov3/blob/main/data/GIF/object_detection_on_video.gif)
+
+- Object Detection on video:
+<p align="center">
+  <img width="600px" height="100%" src="https://github.com/mukundjajadiya/object-detection-opencv-yolov3/blob/main/data/GIF/object_detection_on_video.gif" alt="object-detection-on-video">
+</p>
+
+
 
 ## **Step: 1** Clone Object Detection repository
 ```bash
